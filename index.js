@@ -13,7 +13,7 @@ class cuentaCorriente
     agencia;
 
     constructor() {
-        this.#saldosaldo = 0;
+        this.#saldo = 0;
         this.numero = '';
         this.agencia = '';
     }
@@ -21,23 +21,35 @@ class cuentaCorriente
     depositoEnCuenta(valor) {
         if (valor > 0)
             this.#saldo += valor;
+        return this.#saldo;
     }
 
     retiroDeCuenta(valor) {
         if (valor <= this.#saldo)
             this.#saldo -= valor;
+        return this.#saldo
+    }
+
+    verSaldo() {
+        return this.#saldo;
     }
 
 }
 
 cuentaDeLeonardo = new cuentaCorriente();
 
-cuentaDeLeonardo.depositoEnCuenta(100);
-console.log(cuentaDeLeonardo);
-cuentaDeLeonardo.retiroDeCuenta(100);
-console.log(cuentaDeLeonardo);
-cuentaDeLeonardo.depositoEnCuenta(-10);
-console.log(cuentaDeLeonardo);
+let saldo = cuentaDeLeonardo.verSaldo();
+console.log(`El saldo actual es: ${saldo}`);
+
+saldo = cuentaDeLeonardo.depositoEnCuenta(100);
+console.log(`El saldo actual es: ${saldo}`);
+
+saldo = cuentaDeLeonardo.retiroDeCuenta(100);
+console.log(`El saldo actual es: ${saldo}`);
+
+saldo = cuentaDeLeonardo.depositoEnCuenta(10);
+console.log(`El saldo actual es: ${saldo}`);
+
 
 
 
