@@ -12,16 +12,25 @@ cuentaDeLeonardo.numero = '1';
 cuentaDeLeonardo.agencia = '001';
 cuentaDeLeonardo.cliente = cliente;
 
-console.log(cuentaDeLeonardo);
-
 let saldo = cuentaDeLeonardo.verSaldo();
-console.log(`El saldo actual es: ${saldo}`);
 
 saldo = cuentaDeLeonardo.depositoEnCuenta(150);
-console.log(`El saldo actual es: ${saldo}`);
+console.log(`El saldo actual (CuentaLeonardo) ${saldo}`);
 
-saldo = cuentaDeLeonardo.retiroDeCuenta(100);
-console.log(`El saldo actual es: ${saldo}`);
+const cliente2 = new Cliente();
+cliente2.nombreCliente = 'Maria';
+cliente2.ineCliente = '0987654321';
+cliente2.rfcCliente = '7654321';
 
-saldo = cuentaDeLeonardo.depositoEnCuenta(10);
-console.log(`El saldo actual es: ${saldo}`);
+const cuentaDeMaria = new cuentaCorriente();
+cuentaDeMaria.numero = '2';
+cuentaDeMaria.agencia = '002';
+cuentaDeMaria.cliente = cliente;
+
+cuentaDeLeonardo.transferirParaCuenta(100, cuentaDeMaria);
+
+let saldoMaria = cuentaDeMaria.verSaldo();
+console.log('El saldo actual (CuentaMaria) ' + saldoMaria);
+
+let saldoLeonardo = cuentaDeLeonardo.verSaldo();
+console.log('El saldo actual (CuentaLeonardo) ' + saldoLeonardo);
