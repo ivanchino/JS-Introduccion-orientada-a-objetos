@@ -16,10 +16,10 @@ export class cuentaCorriente
         return this.#cliente;
     }
 
-    constructor() {
+    constructor(numero, agencia) {
         this.#cliente = null;
-        this.numero = '';
-        this.agencia = '';
+        this.numeroCuenta = numero;
+        this.agenciaBanco = agencia;
         this.#saldo = 0;
     }
 
