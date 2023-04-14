@@ -25,10 +25,16 @@ cliente2.rfcCliente = '7654321';
 const cuentaDeMaria = new cuentaCorriente();
 cuentaDeMaria.numero = '2';
 cuentaDeMaria.agencia = '002';
-cuentaDeMaria.cliente = cliente2;
+//cuentaDeMaria.cliente = cliente2;
+
+if (cuentaDeMaria,cliente){
+    console.log(cuentaDeMaria.cliente);
+} else {
+    console.log(cuentaDeMaria);
+}
 
 let parametroValor = 100;
-
+/*
 console.log('Parámetro valor', parametroValor);
 cuentaDeLeonardo.transferirParaCuenta(parametroValor, cuentaDeMaria);
 console.log('Parámetro valor', parametroValor);
@@ -36,7 +42,6 @@ console.log('Parámetro valor', parametroValor);
 let saldoMaria = cuentaDeMaria.verSaldo();
 
 console.log('Cuenta de Maria', cuentaDeMaria);
-/*
 
 console.log('El saldo actual (CuentaMaria) ' + saldoMaria);
 

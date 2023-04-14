@@ -6,7 +6,7 @@ export class cuentaCorriente
     agencia;
 
     constructor() {
-        this.cliente = null;
+        //this.cliente = null;
         this.numero = '';
         this.agencia = '';
         this.#saldo = 0;
