@@ -31,6 +31,7 @@ export class cuentaCorriente
     transferirParaCuenta(valor, cuentaDestino){
         this.retiroDeCuenta(valor);
         cuentaDestino.depositoEnCuenta(valor);
+        valor = 200;
     }
 
 }
