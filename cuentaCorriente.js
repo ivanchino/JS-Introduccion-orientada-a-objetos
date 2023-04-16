@@ -7,19 +7,19 @@ export class cuentaCorriente
     #saldo;
     agencia;
 
-    set setCliente(valor) {
+    set Cliente(valor) {
         if (valor instanceof Cliente) 
             this.#cliente = valor;
     }
 
-    get getCliente() {
+    get Cliente() {
         return this.#cliente;
     }
 
-    constructor(numero, agencia) {
-        this.#cliente = null;
-        this.numeroCuenta = numero;
-        this.agenciaBanco = agencia;
+    constructor(cliente, numero, agencia) {
+        this.cliente = cliente;
+        this.numero = numero;
+        this.agencia = agencia;
         this.#saldo = 0;
     }
 
